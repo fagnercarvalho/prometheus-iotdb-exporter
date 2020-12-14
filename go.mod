@@ -3,7 +3,6 @@ module github.com/fagnercarvalho/prometheus-iotdb-exporter
 go 1.15
 
 require (
-	github.com/apache/thrift v0.13.0
 	github.com/manlge/go-iotdb v0.0.0-20201204020754-d63a3cc64f82
 	github.com/prometheus/client_golang v1.8.0
 	github.com/prometheus/common v0.14.0
