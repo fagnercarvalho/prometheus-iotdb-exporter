@@ -54,7 +54,7 @@ func main() {
 <head><title>IoTDB Exporter</title></head>
 <body>
 <h2>IoTDB Exporter</h2>
-<p><a href='`+ metricsPath +`'>Metrics</a></p>
+<p><a href='` + metricsPath + `'>Metrics</a></p>
 </body></html>
 `)
 

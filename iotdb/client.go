@@ -5,14 +5,17 @@ import (
 )
 
 type Client struct {
-	Host string
-	Port string
-	Username string
-	Password string
+	Host        string
+	Port        string
+	Username    string
+	Password    string
+	TimeoutInMs int
 }
 
 func (c Client) CountStorageGroups() (int, error) {
 	session, err := c.newSession()
+	defer session.Close()
+
 	if err != nil {
 		return -1, err
 	}
@@ -24,7 +27,8 @@ func (c Client) CountStorageGroups() (int, error) {
 
 	var count = 0
 	for {
-		hasNext, err := resp.Next(); if err != nil {
+		hasNext, err := resp.Next()
+		if err != nil {
 			return -1, err
 		}
 
@@ -40,6 +44,8 @@ func (c Client) CountStorageGroups() (int, error) {
 
 func (c Client) CountTimeSeries() (int32, error) {
 	session, err := c.newSession()
+	defer session.Close()
+
 	if err != nil {
 		return -1, err
 	}
@@ -49,7 +55,8 @@ func (c Client) CountTimeSeries() (int32, error) {
 		return -1, err
 	}
 
-	hasNext, err := resp.Next(); if err != nil {
+	hasNext, err := resp.Next()
+	if err != nil {
 		return -1, err
 	}
 
@@ -67,6 +74,8 @@ func (c Client) CountTimeSeries() (int32, error) {
 
 func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 	session, err := c.newSession()
+	defer session.Close()
+
 	if err != nil {
 		return -1, err
 	}
@@ -76,7 +85,8 @@ func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 		return -1, err
 	}
 
-	hasNext, err := resp.Next(); if err != nil {
+	hasNext, err := resp.Next()
+	if err != nil {
 		return -1, err
 	}
 
@@ -94,6 +104,8 @@ func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 
 func (c Client) GetSystemFileSize() (int64, error) {
 	session, err := c.newSession()
+	defer session.Close()
+
 	if err != nil {
 		return -1, err
 	}
@@ -103,7 +115,8 @@ func (c Client) GetSystemFileSize() (int64, error) {
 		return -1, err
 	}
 
-	hasNext, err := resp.Next(); if err != nil {
+	hasNext, err := resp.Next()
+	if err != nil {
 		return -1, err
 	}
 
@@ -121,6 +134,8 @@ func (c Client) GetSystemFileSize() (int64, error) {
 
 func (c Client) CountUsers() (int, error) {
 	session, err := c.newSession()
+	defer session.Close()
+
 	if err != nil {
 		return -1, err
 	}
@@ -132,7 +147,8 @@ func (c Client) CountUsers() (int, error) {
 
 	var count = 0
 	for {
-		hasNext, err := resp.Next(); if err != nil {
+		hasNext, err := resp.Next()
+		if err != nil {
 			return -1, err
 		}
 
@@ -148,11 +164,11 @@ func (c Client) CountUsers() (int, error) {
 
 func (c Client) PingServer() error {
 	session, err := c.newSession()
+	defer session.Close()
+
 	if err != nil {
 		return err
 	}
-
-	defer session.Close()
 
 	return nil
 }

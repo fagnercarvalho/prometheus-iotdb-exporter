@@ -42,12 +42,12 @@ func (f fileSize) Scrape(client iotdb.Client, ch chan<- prometheus.Metric) error
 		errors <- nil
 	}()
 
-	for i := 0; i < 2; i++{
+	for i := 0; i < 2; i++ {
 		select {
-			case err := <-errors:
-				if err != nil {
-					return err
-				}
+		case err := <-errors:
+			if err != nil {
+				return err
+			}
 		}
 	}
 
