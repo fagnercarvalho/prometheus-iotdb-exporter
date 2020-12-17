@@ -9,10 +9,11 @@ import (
 import "github.com/fagnercarvalho/prometheus-iotdb-exporter/iotdb"
 
 type Config struct {
-	Host     string
-	Port     string
-	Username string
-	Password string
+	Host        string
+	Port        string
+	Username    string
+	Password    string
+	TimeoutInMs int
 }
 
 type exporter struct {
@@ -70,7 +71,7 @@ func (e *exporter) Collect(ch chan<- prometheus.Metric) {
 }
 
 func (e *exporter) scrape(ch chan<- prometheus.Metric) {
-	client := iotdb.NewClient(e.config.Host, e.config.Port, e.config.Username, e.config.Username)
+	client := iotdb.NewClient(e.config.Host, e.config.Port, e.config.Username, e.config.Username, e.config.TimeoutInMs)
 	if err := client.PingServer(); err != nil {
 		log.WithError(err).Error("Error when connecting to IoTDB")
 		e.error.Set(1)

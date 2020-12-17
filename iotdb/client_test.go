@@ -6,7 +6,7 @@ import (
 )
 
 func TestCountStorageGroups(t *testing.T) {
-	client := NewClient("127.0.0.1", "6667", "root", "root")
+	client := NewClient("127.0.0.1", "6667", "root", "root", 0)
 
 	count, err := client.CountStorageGroups()
 	if err != nil {
@@ -17,7 +17,7 @@ func TestCountStorageGroups(t *testing.T) {
 }
 
 func TestCountTimeSeries(t *testing.T) {
-	client := NewClient("127.0.0.1", "6667", "root", "root")
+	client := NewClient("127.0.0.1", "6667", "root", "root", 0)
 
 	count, err := client.CountTimeSeries()
 	if err != nil {
@@ -28,7 +28,7 @@ func TestCountTimeSeries(t *testing.T) {
 }
 
 func TestGetWriteAheadLogFileSize(t *testing.T) {
-	client := NewClient("127.0.0.1", "6667", "root", "root")
+	client := NewClient("127.0.0.1", "6667", "root", "root", 0)
 
 	size, err := client.GetWriteAheadLogFileSize()
 	if err != nil {
@@ -39,7 +39,7 @@ func TestGetWriteAheadLogFileSize(t *testing.T) {
 }
 
 func TestGetSystemFileSize(t *testing.T) {
-	client := NewClient("127.0.0.1", "6667", "root", "root")
+	client := NewClient("127.0.0.1", "6667", "root", "root", 0)
 
 	size, err := client.GetSystemFileSize()
 	if err != nil {
@@ -50,7 +50,7 @@ func TestGetSystemFileSize(t *testing.T) {
 }
 
 func TestCountUsers(t *testing.T) {
-	client := NewClient("127.0.0.1", "6667", "root", "root")
+	client := NewClient("127.0.0.1", "6667", "root", "root", 0)
 
 	size, err := client.CountUsers()
 	if err != nil {

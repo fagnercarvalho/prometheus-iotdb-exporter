@@ -163,7 +163,7 @@ func (c Client) newSession() (client.Session, error) {
 	session.User = c.Username
 	session.Passwd = c.Password
 
-	err := session.Open(false, 0)
+	err := session.Open(false, c.TimeoutInMs)
 	if err != nil {
 		return client.Session{}, err
 	}
@@ -171,6 +171,6 @@ func (c Client) newSession() (client.Session, error) {
 	return session, nil
 }
 
-func NewClient(host string, port string, username string, password string) Client {
-	return Client{host, port, username, password}
+func NewClient(host string, port string, username string, password string, timeoutInMs int) Client {
+	return Client{host, port, username, password, timeoutInMs}
 }
