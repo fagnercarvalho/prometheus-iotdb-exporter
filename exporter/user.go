@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	userCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "user", "userCount"), "User Count", nil, nil)
+	userCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "", "userCount"), "User Count", nil, nil)
 )
 
 type user struct {

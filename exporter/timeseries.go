@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	timeSeriesCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "timeSeries", "timeSeriesCount"), "Time Series Count", nil, nil)
+	timeSeriesCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "", "timeSeriesCount"), "Time Series Count", nil, nil)
 )
 
 type timeSeries struct {
