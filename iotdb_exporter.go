@@ -17,7 +17,6 @@ var (
 	iotDBHost     = flag.String("iotDBHost", "127.0.0.1", "IoTDB server host")
 	iotDBPort     = flag.String("iotDBPort", "6667", "IoTDB server port")
 	iotDBUsername = flag.String("iotDBUsername", "root", "IoTDB username")
-	iotDBPassword = flag.String("iotDBPassword", "root", "IoTDB password")
 	iotDBTimeoutInMs = flag.Int("iotDBTimeoutInMs", 0, "IoTDB timeout (in ms) for opening a new database session")
 )
 
@@ -29,11 +28,17 @@ func init() {
 func main() {
 	flag.Parse()
 
+	password := os.Getenv("IOTDB_PASSWORD")
+	if len(password) == 0 {
+		log.Error("Error when trying to get IoTDB password in `IOTDB_PASSWORD` environment variable.")
+		os.Exit(1)
+	}
+
 	config := exporter.Config{
 		Host:     *iotDBHost,
 		Port:     *iotDBPort,
 		Username: *iotDBUsername,
-		Password: *iotDBPassword,
+		Password: password,
 		TimeoutInMs: *iotDBTimeoutInMs,
 	}
 	exporter := exporter.New(config)

@@ -18,17 +18,18 @@ Supported version: 0.11.0.
 | iotDBHost     | IoTDB server host       | 127.0.0.1 |
 | iotDBPort     | IoTDB server port       | 6667      |
 | iotDBUsername | IoTDB username          | root      |
-| iotDPassword  | IoTDB password          | root      |
+
+For security reasons the server password needs to be set by using `IOTDB_PASSWORD` environment variable.
 
 ##### Metrics
 
-| Name                  | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-| Write Ahead File Size | Write Ahead File Size (extracted from the root.stats.file_size.WAL time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties config file. To update the config file check the [server_example](/server_example) folder. |
-| System File Size      | System File Size (extracted from the root.stats.file_size.SYS time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties config file. To update the config file check the [server_example](/server_example) folder. |
-| Storage Group Count   | Storage group count                                          |
-| Timeseries Count      | Timeseries (across all storage groups) count                 |
-| Users Count           | Database users count                                         |
+| Name                  | Metric Name                          | Description                                                  |
+| --------------------- | ------------------------------------ | ------------------------------------------------------------ |
+| Write Ahead File Size | iotdb_fileSize_writeAheadSize        | Write Ahead File Size (extracted from the root.stats.file_size.WAL time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties config file. To update the config file check the [server_example](/server_example) folder. |
+| System File Size      | iotdb_fileSize_systemSize            | System File Size (extracted from the root.stats.file_size.SYS time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties config file. To update the config file check the [server_example](/server_example) folder. |
+| Storage Group Count   | iotdb_storageGroup_storageGroupCount | Storage group count                                          |
+| Timeseries Count      | iotdb_timeSeries_timeSeriesCount     | Timeseries (across all storage groups) count                 |
+| Users Count           | iotdb_user_userCount                 | Database users count                                         |
 
 ##### Docker
 
@@ -36,6 +37,6 @@ Clone the repo and run the following commands.
 
 ```
 docker build -t iotdb-exporter .
-docker run -d -p "2000:8092" --name iotdb-exporter iotdb-exporter
+docker run -d -p "2000:8092" -e IOTDB_PASSWORD="root" --name iotdb-exporter iotdb-exporter
 ```
 

@@ -71,7 +71,7 @@ func (e *exporter) Collect(ch chan<- prometheus.Metric) {
 }
 
 func (e *exporter) scrape(ch chan<- prometheus.Metric) {
-	client := iotdb.NewClient(e.config.Host, e.config.Port, e.config.Username, e.config.Username, e.config.TimeoutInMs)
+	client := iotdb.NewClient(e.config.Host, e.config.Port, e.config.Username, e.config.Password, e.config.TimeoutInMs)
 	if err := client.PingServer(); err != nil {
 		log.WithError(err).Error("Error when connecting to IoTDB")
 		e.error.Set(1)

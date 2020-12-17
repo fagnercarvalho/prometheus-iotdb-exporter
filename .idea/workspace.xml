@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exporter/exporter.go" beforeDir="false" afterPath="$PROJECT_DIR$/exporter/exporter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exporter/fileSize.go" beforeDir="false" afterPath="$PROJECT_DIR$/exporter/fileSize.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotdb/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/iotdb/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iotdb/client_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/iotdb/client_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iotdb_exporter.go" beforeDir="false" afterPath="$PROJECT_DIR$/iotdb_exporter.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,22 +130,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607137753096" />
-    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1608242320629">
+    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1608243643443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608242320629" />
-    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1608242320629">
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608243643443" />
+    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1608243643443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608242320629" />
-    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1608242320629">
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608243643443" />
+    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1608243643443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608242320629" />
-    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1608242320629">
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608243643443" />
+    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1608243643443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608242320629" />
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608243643443" />
     <state width="746" height="261" key="GridCell.Tab.1.bottom" timestamp="1607298615504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
