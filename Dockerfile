@@ -15,4 +15,4 @@ RUN go install -v ./...
 #ENTRYPOINT ["tail", "-f", "/dev/null"]
 CMD ["sh", "-c", "prometheus-iotdb-exporter -listenPort=${listenPort} -iotDBHost=${iotDBHost} -iotDBPort=${iotDBPort} -iotDBUsername=${iotDBUsername} -iotDBPassword=${iotDBPassword}"]
 
-EXPOSE $listenPort
+EXPOSE 8092

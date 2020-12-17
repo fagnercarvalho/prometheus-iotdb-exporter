@@ -6,7 +6,9 @@ Supported version: 0.11.0.
 
 ##### Running
 
+```
 ./iotdb-exporter <flags>
+```
 
 ##### Flags
 
@@ -34,5 +36,6 @@ Clone the repo and run the following commands.
 
 ```
 docker build -t iotdb-exporter .
-docker run -d -p "2000:2000" -e listenPort=2000 --name iotdb-exporter iotdb-exporter
+docker run -d -p "2000:8092" --name iotdb-exporter iotdb-exporter
 ```
+
