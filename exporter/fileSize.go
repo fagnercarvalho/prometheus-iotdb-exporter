@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	writeAheadFileSize = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "fileSize", "writeAheadSize"), "Write Ahead File Size (extracted from the root.stats.file_size.WAL time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties conf file.", nil, nil)
-	systemFileSize     = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "fileSize", "systemSize"), "System File Size (extracted from the root.stats.file_size.SYS time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties conf file.", nil, nil)
+	writeAheadFileSize = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "fileSize", "writeAheadSizeBytes"), "Write Ahead File Size (extracted from the root.stats.file_size.WAL time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties conf file.", nil, nil)
+	systemFileSize     = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "fileSize", "systemSizeBytes"), "System File Size (extracted from the root.stats.file_size.SYS time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties conf file.", nil, nil)
 )
 
 type fileSize struct {
