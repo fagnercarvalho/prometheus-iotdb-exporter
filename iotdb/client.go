@@ -14,11 +14,12 @@ type Client struct {
 
 func (c Client) CountStorageGroups() (int, error) {
 	session, err := c.newSession()
-	defer session.Close()
 
 	if err != nil {
 		return -1, err
 	}
+
+	defer session.Close()
 
 	resp, err := session.ExecuteQueryStatement("SHOW STORAGE GROUP")
 	if err != nil {
@@ -44,11 +45,12 @@ func (c Client) CountStorageGroups() (int, error) {
 
 func (c Client) CountTimeSeries() (int32, error) {
 	session, err := c.newSession()
-	defer session.Close()
 
 	if err != nil {
 		return -1, err
 	}
+
+	defer session.Close()
 
 	resp, err := session.ExecuteQueryStatement("COUNT TIMESERIES")
 	if err != nil {
@@ -74,11 +76,12 @@ func (c Client) CountTimeSeries() (int32, error) {
 
 func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 	session, err := c.newSession()
-	defer session.Close()
 
 	if err != nil {
 		return -1, err
 	}
+
+	defer session.Close()
 
 	resp, err := session.ExecuteQueryStatement("SELECT LAST_VALUE(WAL) FROM root.stats.file_size")
 	if err != nil {
@@ -104,11 +107,12 @@ func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 
 func (c Client) GetSystemFileSize() (int64, error) {
 	session, err := c.newSession()
-	defer session.Close()
 
 	if err != nil {
 		return -1, err
 	}
+
+	defer session.Close()
 
 	resp, err := session.ExecuteQueryStatement("SELECT LAST_VALUE(SYS) FROM root.stats.file_size")
 	if err != nil {
@@ -134,11 +138,12 @@ func (c Client) GetSystemFileSize() (int64, error) {
 
 func (c Client) CountUsers() (int, error) {
 	session, err := c.newSession()
-	defer session.Close()
 
 	if err != nil {
 		return -1, err
 	}
+
+	defer session.Close()
 
 	resp, err := session.ExecuteQueryStatement("LIST USER")
 	if err != nil {
@@ -164,11 +169,12 @@ func (c Client) CountUsers() (int, error) {
 
 func (c Client) PingServer() error {
 	session, err := c.newSession()
-	defer session.Close()
 
 	if err != nil {
 		return err
 	}
+
+	defer session.Close()
 
 	return nil
 }
