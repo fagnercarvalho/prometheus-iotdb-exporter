@@ -27,9 +27,9 @@ For security reasons the server password needs to be set by using `IOTDB_PASSWOR
 | --------------------- | ----------------------------- | ------------------------------------------------------------ |
 | Write Ahead File Size | iotdb_write_ahead_file_size_bytes | Write Ahead File Size (extracted from the root.stats.file_size.WAL time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties config file. To update the config file check the [server_example](/server_example) folder. |
 | System File Size      | iotdb_system_file_size_bytes       | System File Size (extracted from the root.stats.file_size.SYS time series) in bytes. For this metric to be collected the enable_stat_monitor option must be enabled in the /iotdb/conf/iotdb-engine.properties config file. To update the config file check the [server_example](/server_example) folder. |
-| Storage Group Count   | iotdb_storage_group_count         | Storage group count                                          |
-| Timeseries Count      | iotdb_time_series_count           | Timeseries (across all storage groups) count                 |
-| Users Count           | iotdb_user_count                  | Database users count                                         |
+| Storage Group Count   | iotdb_storage_groups         | Storage group count                                          |
+| Timeseries Count      | iotdb_time_series           | Timeseries (across all storage groups) count                 |
+| Users Count           | iotdb_users                  | Database users count                                         |
 
 ##### Docker
 
