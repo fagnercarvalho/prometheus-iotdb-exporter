@@ -19,7 +19,7 @@ jobs:
             - 6667:6667
             - 31999:31999
             - 8181:8181
-        options: --entrypoint /iotdb/sbin/start-server.sh
+        options: --entrypoint '/iotdb/sbin/start-server.sh'
               
     steps:
     - name: Set up Go 1.x
