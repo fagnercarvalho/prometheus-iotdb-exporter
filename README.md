@@ -35,7 +35,15 @@ For security reasons the server password needs to be set by using `IOTDB_PASSWOR
 
 ##### Docker
 
-Clone the repo and run the following commands.
+You can deploy this exporter by using the [fagner/prometheus-iotdb-exporter](https://hub.docker.com/r/fagner/prometheus-iotdb-exporter/) Docker image.
+
+```
+docker pull fagner/prometheus-iotdb-exporter
+
+docker run -d -p "2000:8092" --name iotdb-exporter fagner/prometheus-iotdb-exporter
+```
+
+Or clone the repo and run the following commands.
 
 ```
 docker build -t iotdb-exporter .
