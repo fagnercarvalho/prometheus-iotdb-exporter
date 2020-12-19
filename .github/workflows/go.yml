@@ -43,3 +43,8 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+
+    - name: Codecov
+      uses: codecov/codecov-action@v1.1.0
+      with:
+        name: Prometheus IoTDB exporter
