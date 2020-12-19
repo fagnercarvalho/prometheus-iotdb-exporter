@@ -1,5 +1,7 @@
 ## IoTDB Server Exporter [![Github Actions](https://img.shields.io/github/workflow/status/fagnercarvalho/prometheus-iotdb-exporter/Go)](https://github.com/fagnercarvalho/prometheus-iotdb-exporter/actions?query=workflow%3AGoo)
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/fagnercarvalho/prometheus-iotdb-exporter)](https://goreportcard.com/report/github.com/fagnercarvalho/prometheus-iotdb-exporter) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/fagnercarvalho/prometheus-iotdb-exporter)
+
 Prometheus exporter for IoTDB server metrics.
 
 Supported version: 0.11.0.
