@@ -13,10 +13,10 @@ import (
 )
 
 var (
-	listenPort    = flag.String("listenPort", "8092", "exporter listening port")
-	iotDBHost     = flag.String("iotDBHost", "127.0.0.1", "IoTDB server host")
-	iotDBPort     = flag.String("iotDBPort", "6667", "IoTDB server port")
-	iotDBUsername = flag.String("iotDBUsername", "root", "IoTDB username")
+	listenPort       = flag.String("listenPort", "8092", "exporter listening port")
+	iotDBHost        = flag.String("iotDBHost", "127.0.0.1", "IoTDB server host")
+	iotDBPort        = flag.String("iotDBPort", "6667", "IoTDB server port")
+	iotDBUsername    = flag.String("iotDBUsername", "root", "IoTDB username")
 	iotDBTimeoutInMs = flag.Int("iotDBTimeoutInMs", 0, "IoTDB timeout (in ms) for opening a new database session")
 )
 
@@ -35,10 +35,10 @@ func main() {
 	}
 
 	config := exporter.Config{
-		Host:     *iotDBHost,
-		Port:     *iotDBPort,
-		Username: *iotDBUsername,
-		Password: password,
+		Host:        *iotDBHost,
+		Port:        *iotDBPort,
+		Username:    *iotDBUsername,
+		Password:    password,
 		TimeoutInMs: *iotDBTimeoutInMs,
 	}
 	exporter := exporter.New(config)

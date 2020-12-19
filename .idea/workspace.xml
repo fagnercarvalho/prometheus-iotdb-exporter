@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2db47231-1756-4222-b11c-ea8be7b3dd2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exporter/exporter.go" beforeDir="false" afterPath="$PROJECT_DIR$/exporter/exporter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exporter/scraper.go" beforeDir="false" afterPath="$PROJECT_DIR$/exporter/scraper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotdb/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/iotdb/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iotdb_exporter.go" beforeDir="false" afterPath="$PROJECT_DIR$/iotdb_exporter.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

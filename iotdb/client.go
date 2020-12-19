@@ -4,6 +4,7 @@ import (
 	"github.com/manlge/go-iotdb/client"
 )
 
+// Client represents a client for an IoTDB server instance.
 type Client struct {
 	Host        string
 	Port        string
@@ -12,6 +13,7 @@ type Client struct {
 	TimeoutInMs int
 }
 
+// CountStorageGroups returns the storage groups count from a IoTDB instance.
 func (c Client) CountStorageGroups() (int, error) {
 	session, err := c.newSession()
 
@@ -43,6 +45,7 @@ func (c Client) CountStorageGroups() (int, error) {
 	return -1, nil
 }
 
+// CountTimeSeries returns the time series count from a IoTDB instance.
 func (c Client) CountTimeSeries() (int32, error) {
 	session, err := c.newSession()
 
@@ -74,6 +77,7 @@ func (c Client) CountTimeSeries() (int32, error) {
 	return count, nil
 }
 
+// GetWriteAheadLogFileSize returns the write ahead log file size (in bytes) from a IoTDB instance.
 func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 	session, err := c.newSession()
 
@@ -105,6 +109,7 @@ func (c Client) GetWriteAheadLogFileSize() (int64, error) {
 	return count, nil
 }
 
+// GetSystemFileSize returns the system file size (in bytes) from a IoTDB instance.
 func (c Client) GetSystemFileSize() (int64, error) {
 	session, err := c.newSession()
 
@@ -136,6 +141,7 @@ func (c Client) GetSystemFileSize() (int64, error) {
 	return count, nil
 }
 
+// CountUsers returns the users count from a IoTDB instance.
 func (c Client) CountUsers() (int, error) {
 	session, err := c.newSession()
 
@@ -167,6 +173,7 @@ func (c Client) CountUsers() (int, error) {
 	return -1, nil
 }
 
+// PingServer pings a IoTDB instance to know if the server is running or not.
 func (c Client) PingServer() error {
 	session, err := c.newSession()
 
@@ -193,6 +200,7 @@ func (c Client) newSession() (client.Session, error) {
 	return session, nil
 }
 
+// NewClient instantiates a new client for an IoTDB server instance.
 func NewClient(host string, port string, username string, password string, timeoutInMs int) Client {
 	return Client{host, port, username, password, timeoutInMs}
 }

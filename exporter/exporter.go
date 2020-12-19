@@ -8,6 +8,7 @@ import (
 )
 import "github.com/fagnercarvalho/prometheus-iotdb-exporter/iotdb"
 
+// Config represents an IoTDB configuration used to get the metrics.
 type Config struct {
 	Host        string
 	Port        string
@@ -17,10 +18,11 @@ type Config struct {
 }
 
 type exporter struct {
-	scrapers     []Scraper
-	config       Config
+	scrapers []Scraper
+	config   Config
 }
 
+// New instantiates a new Prometheus metric exporter.
 func New(config Config) *exporter {
 	exp := &exporter{config: config}
 
