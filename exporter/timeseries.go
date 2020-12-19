@@ -6,14 +6,14 @@ import (
 )
 
 var (
-	timeSeriesCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "", "timeSeriesCount"), "Time Series Count", nil, nil)
+	timeSeriesCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "", "time_series_count"), "Time Series Count", nil, nil)
 )
 
 type timeSeries struct {
 }
 
 func (s timeSeries) Name() string {
-	return "storageGroup"
+	return "timeSeries"
 }
 
 func (s timeSeries) Scrape(client iotdb.Client, ch chan<- prometheus.Metric) error {

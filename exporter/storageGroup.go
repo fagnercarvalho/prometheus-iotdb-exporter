@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	storageGroupCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "", "storageGroupCount"), "Storage Group Count", nil, nil)
+	storageGroupCount = prometheus.NewDesc(prometheus.BuildFQName("iotdb", "", "storage_group_count"), "Storage Group Count", nil, nil)
 )
 
 type storageGroup struct {
