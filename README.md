@@ -1,4 +1,4 @@
-## IoTDB Server Exporter
+## IoTDB Server Exporter [![Github Actions](https://img.shields.io/github/workflow/status/fagnercarvalho/prometheus-iotdb-exporter/Go)]
 
 Prometheus exporter for IoTDB server metrics.
 

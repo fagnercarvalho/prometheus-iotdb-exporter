@@ -4,8 +4,6 @@
     <list default="true" id="2db47231-1756-4222-b11c-ea8be7b3dd2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exporter/storageGroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/exporter/storageGroup.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exporter/timeseries.go" beforeDir="false" afterPath="$PROJECT_DIR$/exporter/timeseries.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
