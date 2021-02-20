@@ -1,7 +1,7 @@
 package iotdb
 
 import (
-	"github.com/manlge/go-iotdb/client"
+	"github.com/apache/iotdb-client-go/client"
 )
 
 // Client represents a client for an IoTDB server instance.
@@ -186,15 +186,17 @@ func (c Client) PingServer() error {
 	return nil
 }
 
-func (c Client) newSession() (client.Session, error) {
-	session := client.NewSession(c.Host, c.Port)
-
-	session.User = c.Username
-	session.Passwd = c.Password
+func (c Client) newSession() (*client.Session, error) {
+	session := client.NewSession(&client.Config{
+		Host:     c.Host,
+		Port:     c.Port,
+		UserName: c.Username,
+		Password: c.Password,
+	})
 
 	err := session.Open(false, c.TimeoutInMs)
 	if err != nil {
-		return client.Session{}, err
+		return nil, err
 	}
 
 	return session, nil
@@ -202,5 +204,11 @@ func (c Client) newSession() (client.Session, error) {
 
 // NewClient instantiates a new client for an IoTDB server instance.
 func NewClient(host string, port string, username string, password string, timeoutInMs int) Client {
-	return Client{host, port, username, password, timeoutInMs}
+	return Client{
+		Host:        host,
+		Port:        port,
+		Username:    username,
+		Password:    password,
+		TimeoutInMs: timeoutInMs,
+	}
 }
