@@ -20,6 +20,8 @@ set IOTDB_PASSWORD=root
 prometheus-iotdb-exporter.exe <flags>
 ```
 
+Then go to localhost:8092 to see your metrics.
+
 ##### Flags
 
 | Name          | Description             | Default   |
