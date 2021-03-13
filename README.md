@@ -6,10 +6,18 @@ Prometheus exporter for IoTDB server metrics.
 
 Supported version: 0.11.0.
 
-##### Running
+##### Running (Linux)
 
 ```
-./iotdb-exporter <flags>
+export IOTDB_PASSWORD=root
+./prometheus-iotdb-exporter <flags>
+```
+
+##### Running (Windows)
+
+```
+set IOTDB_PASSWORD=root
+prometheus-iotdb-exporter.exe <flags>
 ```
 
 ##### Flags
