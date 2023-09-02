@@ -46,7 +46,7 @@ func (c Client) CountStorageGroups() (int, error) {
 }
 
 // CountTimeSeries returns the time series count from a IoTDB instance.
-func (c Client) CountTimeSeries() (int32, error) {
+func (c Client) CountTimeSeries() (int64, error) {
 	session, err := c.newSession()
 
 	if err != nil {
@@ -65,7 +65,7 @@ func (c Client) CountTimeSeries() (int32, error) {
 		return -1, err
 	}
 
-	var count int32
+	var count int64
 	if !hasNext {
 		return count, nil
 	}
